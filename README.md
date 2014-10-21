@@ -36,9 +36,10 @@ Code example
 Using the plugin in your app couldn't be easier:
 
 ```js
-function successFunction()
+
+function successFunction() 
 {
-    console.log("It worked!");
+	console.log("It worked!");
 }
 
 function errorFunction(error)
@@ -51,11 +52,11 @@ function trace(value)
 	console.log(value);
 }
 
-// Is this plugin supported?
-AndroidFullScreen.isSupported();
+// Is fullscreen supported?
+AndroidFullScreen.isSupported(trace, errorFunction);
 
 // Is immersive mode supported?
-AndroidFullScreen.isImmersiveModeSupported(successFunction, errorFunction);
+AndroidFullScreen.isImmersiveModeSupported(trace, errorFunction);
 
 // The width of the screen in immersive mode
 AndroidFullScreen.immersiveWidth(trace, errorFunction);
